@@ -1,0 +1,6 @@
+framework module Pods_SpeedoMeterTests {
+  umbrella header "Pods-SpeedoMeterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
