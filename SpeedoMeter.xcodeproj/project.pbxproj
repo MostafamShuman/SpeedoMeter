@@ -21,6 +21,7 @@
 		F3CC365421308DE10073736E /* SPDLocationAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC365321308DE10073736E /* SPDLocationAuthorization.swift */; };
 		F3CC36562130938C0073736E /* SPDLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC36552130938C0073736E /* SPDLocationProvider.swift */; };
 		F3CC365821309FF20073736E /* SPDLocationSpeedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */; };
+		F3CC36622130AB220073736E /* SPDLocationSpeedChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC36612130AB220073736E /* SPDLocationSpeedChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		F3CC365321308DE10073736E /* SPDLocationAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationAuthorization.swift; sourceTree = "<group>"; };
 		F3CC36552130938C0073736E /* SPDLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationProvider.swift; sourceTree = "<group>"; };
 		F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedProvider.swift; sourceTree = "<group>"; };
+		F3CC36612130AB220073736E /* SPDLocationSpeedChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedChecker.swift; sourceTree = "<group>"; };
 		F941F536C8FB3648349AC76A /* Pods-SpeedoMeterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedoMeterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedoMeterTests/Pods-SpeedoMeterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 				F3CC36552130938C0073736E /* SPDLocationProvider.swift */,
 				F3CC365321308DE10073736E /* SPDLocationAuthorization.swift */,
 				F309E07D21259C120027D153 /* SPDLocationManager.swift */,
+				F3CC36612130AB220073736E /* SPDLocationSpeedChecker.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				F309E07E21259C120027D153 /* SPDLocationManager.swift in Sources */,
 				F308E5992125928000C25051 /* ViewController.swift in Sources */,
 				F3CC365421308DE10073736E /* SPDLocationAuthorization.swift in Sources */,
+				F3CC36622130AB220073736E /* SPDLocationSpeedChecker.swift in Sources */,
 				F308E5972125928000C25051 /* AppDelegate.swift in Sources */,
 				F3CC36562130938C0073736E /* SPDLocationProvider.swift in Sources */,
 				F3CC365821309FF20073736E /* SPDLocationSpeedProvider.swift in Sources */,
