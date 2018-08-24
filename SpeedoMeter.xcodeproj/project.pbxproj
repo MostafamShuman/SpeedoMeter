@@ -22,6 +22,7 @@
 		F3CC36562130938C0073736E /* SPDLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC36552130938C0073736E /* SPDLocationProvider.swift */; };
 		F3CC365821309FF20073736E /* SPDLocationSpeedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */; };
 		F3CC36622130AB220073736E /* SPDLocationSpeedChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC36612130AB220073736E /* SPDLocationSpeedChecker.swift */; };
+		F3CC36652130C58E0073736E /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC36642130C58E0073736E /* MainAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		F3CC36552130938C0073736E /* SPDLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationProvider.swift; sourceTree = "<group>"; };
 		F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedProvider.swift; sourceTree = "<group>"; };
 		F3CC36612130AB220073736E /* SPDLocationSpeedChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedChecker.swift; sourceTree = "<group>"; };
+		F3CC36642130C58E0073736E /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 		F941F536C8FB3648349AC76A /* Pods-SpeedoMeterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedoMeterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedoMeterTests/Pods-SpeedoMeterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 		F308E5952125928000C25051 /* SpeedoMeter */ = {
 			isa = PBXGroup;
 			children = (
+				F3CC36632130C57A0073736E /* Assempler */,
 				F309E07C21259BF90027D153 /* Location */,
 				F308E5962125928000C25051 /* AppDelegate.swift */,
 				F308E5982125928000C25051 /* ViewController.swift */,
@@ -186,6 +189,14 @@
 				F309E07D21259C120027D153 /* SPDLocationManager.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		F3CC36632130C57A0073736E /* Assempler */ = {
+			isa = PBXGroup;
+			children = (
+				F3CC36642130C58E0073736E /* MainAssembler.swift */,
+			);
+			path = Assempler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +419,7 @@
 				F308E5972125928000C25051 /* AppDelegate.swift in Sources */,
 				F3CC36562130938C0073736E /* SPDLocationProvider.swift in Sources */,
 				F3CC365821309FF20073736E /* SPDLocationSpeedProvider.swift in Sources */,
+				F3CC36652130C58E0073736E /* MainAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

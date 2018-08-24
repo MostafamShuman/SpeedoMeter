@@ -55,7 +55,7 @@ extension SPDDefaultLocationAuthorization: SPDLocationManagerAuthorizationDelega
     }
 }
 
-class SPDLocationAuthorizationAssemply: Assembly {
+class SPDLocationAuthorizationAssembly: Assembly {
     func assemble(container: Container) {
         container.register(SPDLocationAuthorization.self, factory:  { r in
             let locationManager = r.resolve(SPDLocationManager.self)!

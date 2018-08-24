@@ -56,7 +56,7 @@ extension SPDDefaultLocationSpeedChecker: SPDLocationConsumer {
     }
 }
 
-class SPDLocationSpeedCheckerAssemply: Assembly {
+class SPDLocationSpeedCheckerAssembly: Assembly {
     func assemble(container: Container) {
         container.register(SPDLocationSpeedChecker.self, factory: { r in
             let locationProvider = r.resolve(SPDLocationProvider.self)!

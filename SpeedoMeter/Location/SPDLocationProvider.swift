@@ -57,7 +57,7 @@ extension SPDDefaultLocationProvider: SPDLocationManagerDelegate {
         }
     }
 }
-class SPDLocationProviderAssemply: Assembly {
+class SPDLocationProviderAssembly: Assembly {
     func assemble(container: Container) {
         container.register(SPDLocationProvider.self, factory: { r in
             let locationManager = r.resolve(SPDLocationManager.self)!

@@ -33,7 +33,7 @@ extension SPDDefaultLocationSpeedProvider: SPDLocationConsumer {
     
 }
 
-class SPDLocationSpeedProviderAssemply: Assembly {
+class SPDLocationSpeedProviderAssembly: Assembly {
     func assemble(container: Container) {
         container.register(SPDLocationSpeedProvider.self,factory: { r in
             let locationProvider = r.resolve(SPDLocationProvider.self)!
