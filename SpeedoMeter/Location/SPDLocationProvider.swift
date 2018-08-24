@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import Swinject
 
 protocol SPDLocationConsumer: class {
     func consumeLocation(_ location: CLLocation)
@@ -54,5 +55,14 @@ extension SPDDefaultLocationProvider: SPDLocationManagerDelegate {
         for consumer in locationConsumers {
             consumer.consumeLocation(location)
         }
+    }
+}
+class SPDLocationProviderAssemply: Assembly {
+    func assemble(container: Container) {
+        container.register(SPDLocationProvider.self, factory: { r in
+            let locationManager = r.resolve(SPDLocationManager.self)!
+            let locationAuthorization = r.resolve(SPDLocationAuthorization.self)!
+            return SPDDefaultLocationProvider(locationManager: locationManager, locationAuthorization: locationAuthorization)
+        }).inObjectScope(.weak)
     }
 }

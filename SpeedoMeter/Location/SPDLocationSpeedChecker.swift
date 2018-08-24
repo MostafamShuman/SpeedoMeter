@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import Swinject
 
 protocol SPDLocationSpeedCheckerDelegate: class {
     func exeedingMaximumSpeedChange(for speedChecker:SPDLocationSpeedChecker)
@@ -52,5 +53,14 @@ extension SPDDefaultLocationSpeedChecker: SPDLocationSpeedChecker {
 extension SPDDefaultLocationSpeedChecker: SPDLocationConsumer {
     func consumeLocation(_ location: CLLocation) {
         lastLocation = location
+    }
+}
+
+class SPDLocationSpeedCheckerAssemply: Assembly {
+    func assemble(container: Container) {
+        container.register(SPDLocationSpeedChecker.self, factory: { r in
+            let locationProvider = r.resolve(SPDLocationProvider.self)!
+            return SPDDefaultLocationSpeedChecker(locationProvider: locationProvider)
+        }).inObjectScope(.weak)
     }
 }

@@ -180,10 +180,10 @@
 			isa = PBXGroup;
 			children = (
 				F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */,
+				F3CC36612130AB220073736E /* SPDLocationSpeedChecker.swift */,
 				F3CC36552130938C0073736E /* SPDLocationProvider.swift */,
 				F3CC365321308DE10073736E /* SPDLocationAuthorization.swift */,
 				F309E07D21259C120027D153 /* SPDLocationManager.swift */,
-				F3CC36612130AB220073736E /* SPDLocationSpeedChecker.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
