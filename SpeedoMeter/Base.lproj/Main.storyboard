@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,103 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeedoMeter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAZ-Aa-cza">
+                                <rect key="frame" x="16" y="527.5" width="116.5" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-Ta-yt6">
+                                <rect key="frame" x="20" y="635" width="49" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-nw-AQY" customClass="UIBorderButton" customModule="SpeedoMeter" customModuleProvider="target">
+                                <rect key="frame" x="274" y="616" width="85" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="8RS-ul-SzS"/>
+                                    <constraint firstAttribute="height" constant="35" id="Akk-Az-7YV"/>
+                                </constraints>
+                                <state key="normal" title="Max Speed"/>
+                                <connections>
+                                    <action selector="didTapMaxSpeed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CCA-4g-GnO"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tk3-2O-T93">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjV-zT-c27" customClass="UIBorderButton" customModule="SpeedoMeter" customModuleProvider="target">
+                                        <rect key="frame" x="274" y="24" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="4Ll-PS-j1a"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="yHe-YC-vBX"/>
+                                        </constraints>
+                                        <state key="normal" title="Max Speed">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapMaxSpeed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQ3-XV-obq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUC-Xj-oM2">
+                                        <rect key="frame" x="16" y="-64.5" width="116.5" height="119.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vq-1M-9cR">
+                                        <rect key="frame" x="20" y="43" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XjV-zT-c27" secondAttribute="trailing" constant="16" id="6yG-eq-k2B"/>
+                                    <constraint firstItem="kUC-Xj-oM2" firstAttribute="leading" secondItem="tk3-2O-T93" secondAttribute="leading" constant="16" id="BTa-lJ-LjB"/>
+                                    <constraint firstItem="3Vq-1M-9cR" firstAttribute="leading" secondItem="tk3-2O-T93" secondAttribute="leading" constant="20" id="G4z-Wf-H2p"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Vq-1M-9cR" secondAttribute="bottom" constant="8" id="PdE-gn-n6z"/>
+                                    <constraint firstItem="XjV-zT-c27" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tk3-2O-T93" secondAttribute="leading" constant="274" id="UQQ-Hq-x8F"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kUC-Xj-oM2" secondAttribute="trailing" constant="20" symbolic="YES" id="aqv-TX-vsn"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Vq-1M-9cR" secondAttribute="trailing" constant="20" symbolic="YES" id="g35-jb-Ezm"/>
+                                    <constraint firstAttribute="height" constant="75" id="mfX-7V-fsP"/>
+                                    <constraint firstAttribute="bottom" secondItem="kUC-Xj-oM2" secondAttribute="bottom" constant="20" id="xpT-XA-CjY"/>
+                                    <constraint firstAttribute="bottom" secondItem="XjV-zT-c27" secondAttribute="bottom" constant="16" id="zlo-9L-Qtc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1bc-Ta-yt6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="7k2-U7-8pk"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rAZ-Aa-cza" secondAttribute="trailing" constant="242.5" id="AFe-0r-cDK"/>
+                            <constraint firstItem="j1Y-nw-AQY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="JLO-uS-dsa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1bc-Ta-yt6" secondAttribute="bottom" constant="8" id="MXr-o6-4sN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1bc-Ta-yt6" secondAttribute="trailing" constant="304" id="jOX-N7-pWb"/>
+                            <constraint firstItem="tk3-2O-T93" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="m4i-Nc-5dY"/>
+                            <constraint firstItem="tk3-2O-T93" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nI9-PU-C5r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rAZ-Aa-cza" secondAttribute="bottom" constant="20" id="nWf-dK-bsR"/>
+                            <constraint firstItem="tk3-2O-T93" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="toB-zq-jcj"/>
+                            <constraint firstItem="j1Y-nw-AQY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="274" id="uJw-G9-Q2f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j1Y-nw-AQY" secondAttribute="bottom" constant="16" id="usz-IY-Zzr"/>
+                            <constraint firstItem="rAZ-Aa-cza" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="wqw-LP-ER6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="speedViewHightConstrain" destination="mfX-7V-fsP" id="m7l-6i-Gy4"/>
+                        <outletCollection property="colorableView" destination="tk3-2O-T93" collectionClass="NSMutableArray" id="Dde-bb-gtV"/>
+                        <outletCollection property="speedLabels" destination="kUC-Xj-oM2" collectionClass="NSMutableArray" id="HGp-Ow-hPK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

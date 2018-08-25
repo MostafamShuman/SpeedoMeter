@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         locationAuthorization.delegate = self
     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         locationAuthorization.checkAuthorization()
         return true
     }

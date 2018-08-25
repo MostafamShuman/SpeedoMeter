@@ -18,6 +18,7 @@
 		F308E5AC2125928200C25051 /* SpeedoMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308E5AB2125928200C25051 /* SpeedoMeterTests.swift */; };
 		F308E5B72125928200C25051 /* SpeedoMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308E5B62125928200C25051 /* SpeedoMeterUITests.swift */; };
 		F309E07E21259C120027D153 /* SPDLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F309E07D21259C120027D153 /* SPDLocationManager.swift */; };
+		F3AEC8CD2130D2900021D974 /* UIBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8CC2130D2900021D974 /* UIBorderButton.swift */; };
 		F3CC365421308DE10073736E /* SPDLocationAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC365321308DE10073736E /* SPDLocationAuthorization.swift */; };
 		F3CC36562130938C0073736E /* SPDLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC36552130938C0073736E /* SPDLocationProvider.swift */; };
 		F3CC365821309FF20073736E /* SPDLocationSpeedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */; };
@@ -65,6 +66,7 @@
 		F308E5B62125928200C25051 /* SpeedoMeterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedoMeterUITests.swift; sourceTree = "<group>"; };
 		F308E5B82125928200C25051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F309E07D21259C120027D153 /* SPDLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationManager.swift; sourceTree = "<group>"; };
+		F3AEC8CC2130D2900021D974 /* UIBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderButton.swift; sourceTree = "<group>"; };
 		F3CC365321308DE10073736E /* SPDLocationAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationAuthorization.swift; sourceTree = "<group>"; };
 		F3CC36552130938C0073736E /* SPDLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationProvider.swift; sourceTree = "<group>"; };
 		F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedProvider.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		F308E5952125928000C25051 /* SpeedoMeter */ = {
 			isa = PBXGroup;
 			children = (
+				F3AEC8CA2130D23E0021D974 /* Helper */,
 				F3CC36632130C57A0073736E /* Assempler */,
 				F309E07C21259BF90027D153 /* Location */,
 				F308E5962125928000C25051 /* AppDelegate.swift */,
@@ -189,6 +192,22 @@
 				F309E07D21259C120027D153 /* SPDLocationManager.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		F3AEC8CA2130D23E0021D974 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F3AEC8CB2130D2450021D974 /* @IBDesignable */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F3AEC8CB2130D2450021D974 /* @IBDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				F3AEC8CC2130D2900021D974 /* UIBorderButton.swift */,
+			);
+			path = "@IBDesignable";
 			sourceTree = "<group>";
 		};
 		F3CC36632130C57A0073736E /* Assempler */ = {
@@ -418,6 +437,7 @@
 				F3CC36622130AB220073736E /* SPDLocationSpeedChecker.swift in Sources */,
 				F308E5972125928000C25051 /* AppDelegate.swift in Sources */,
 				F3CC36562130938C0073736E /* SPDLocationProvider.swift in Sources */,
+				F3AEC8CD2130D2900021D974 /* UIBorderButton.swift in Sources */,
 				F3CC365821309FF20073736E /* SPDLocationSpeedProvider.swift in Sources */,
 				F3CC36652130C58E0073736E /* MainAssembler.swift in Sources */,
 			);
@@ -603,7 +623,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mostafashuman.SpeedoMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -623,7 +643,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mostafashuman.SpeedoMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
