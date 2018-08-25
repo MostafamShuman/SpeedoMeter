@@ -12,8 +12,8 @@ import Foundation
 @testable import SpeedoMeter
 
 class SPDLocationSpeedCheckerDelegateMock: SPDLocationSpeedCheckerDelegate {
-    var didchangeExeedingMaximumSpeed = false
+    var didchangeExeedingMaxSpeed = false
     func exeedingMaximumSpeedChange(for speedChecker: SPDLocationSpeedChecker) {
-        didchangeExeedingMaximumSpeed = true
+        didchangeExeedingMaxSpeed = true
     }
 }

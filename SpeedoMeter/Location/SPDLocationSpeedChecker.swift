@@ -15,7 +15,7 @@ protocol SPDLocationSpeedCheckerDelegate: class {
 protocol SPDLocationSpeedChecker: class {
     var delegate: SPDLocationSpeedCheckerDelegate? { get set }
     var maximumSpeed: CLLocationSpeed? { get set }
-    var isExeededMaximumSpeed: Bool { get }
+    var isExceededMaximumSpeed: Bool { get }
 }
 
 class SPDDefaultLocationSpeedChecker {
@@ -26,12 +26,18 @@ class SPDDefaultLocationSpeedChecker {
             checkIfSpeedExeeded()
         }
     }
-    var isExeededMaximumSpeed: Bool = false {
+    var isExceededMaximumSpeed: Bool = false {
         didSet {
-            delegate?.exeedingMaximumSpeedChange(for: self)
+            if oldValue != isExceededMaximumSpeed {
+                delegate?.exeedingMaximumSpeedChange(for: self)
+            }
         }
     }
-    var lastLocation: CLLocation?
+    var lastLocation: CLLocation? {
+        didSet {
+            checkIfSpeedExeeded()
+        }
+    }
     init(locationProvider: SPDLocationProvider) {
         self.locationProvider = locationProvider
         locationProvider.add(self)
@@ -40,9 +46,9 @@ class SPDDefaultLocationSpeedChecker {
 private extension SPDDefaultLocationSpeedChecker {
     func checkIfSpeedExeeded(){
         if let maximumSpeed = maximumSpeed, let location = lastLocation{
-            isExeededMaximumSpeed = location.speed > maximumSpeed
+            isExceededMaximumSpeed = location.speed > maximumSpeed
         } else {
-            isExeededMaximumSpeed = false
+            isExceededMaximumSpeed = false
         }
     }
 }

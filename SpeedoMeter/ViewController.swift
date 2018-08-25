@@ -72,7 +72,7 @@ extension ViewController: SPDLocationSpeedProviderDelegate {
 }
 extension ViewController: SPDLocationSpeedCheckerDelegate {
     func exeedingMaximumSpeedChange(for speedChecker: SPDLocationSpeedChecker) {
-        let color: UIColor = speedChecker.isExeededMaximumSpeed ? .speedometerRed : .speedometerBlue
+        let color: UIColor = speedChecker.isExceededMaximumSpeed ? .speedometerRed : .speedometerBlue
         UIView.animate(withDuration: 1.0) {[weak self] in
             for view in self?.colorableView ?? [] {
                 if let label = view as? UILabel {
