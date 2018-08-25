@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        setupWindow()
         locationAuthorization.checkAuthorization()
         return true
     }
@@ -43,5 +45,18 @@ extension AppDelegate: SPDLocationAuthorizationDelegate {
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertController.addAction(okAction)
         window?.rootViewController?.present(alertController, animated: true, completion: nil)
+    }
+}
+private extension AppDelegate {
+    func setupWindow() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+        
+        let storyboard = SwinjectStoryboard.create(name: "Main", bundle: nil)
+        
+        window.backgroundColor = .black
+        window.rootViewController = storyboard.instantiateInitialViewController()
+        
+        self.window = window
     }
 }

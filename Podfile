@@ -7,6 +7,7 @@ target 'SpeedoMeter' do
 
   # Pods for SpeedoMeter
    pod 'Swinject'
+   pod 'SwinjectStoryboard'
   target 'SpeedoMeterTests' do
     inherit! :search_paths
     # Pods for testing

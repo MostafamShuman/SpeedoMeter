@@ -1,16 +1,21 @@
 PODS:
   - Swinject (2.4.1)
+  - SwinjectStoryboard (2.0.1):
+    - Swinject (~> 2.4)
 
 DEPENDENCIES:
   - Swinject
+  - SwinjectStoryboard
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Swinject
+    - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Swinject: f7f15a9672e99328c1f07f277091087917215700
+  SwinjectStoryboard: ad2529218a1504cc888040ee56c13d7cb1cc7998
 
-PODFILE CHECKSUM: 755811b789b6c3de3bc1c50c91411bfc54b8d598
+PODFILE CHECKSUM: c14631bdf55a3612df45ddb25b514be17fc3789e
 
 COCOAPODS: 1.5.3

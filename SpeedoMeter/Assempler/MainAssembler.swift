@@ -7,9 +7,10 @@
 //
 
 import Swinject
+import SwinjectStoryboard
 
 class MainAssembler {
-    private let assembler = Assembler()
+    private let assembler = Assembler(container: SwinjectStoryboard.defaultContainer)
     var resolver: Resolver {
         return assembler.resolver
     }
@@ -19,5 +20,6 @@ class MainAssembler {
         assembler.apply(assembly: SPDLocationProviderAssembly())
         assembler.apply(assembly: SPDLocationSpeedProviderAssembly())
         assembler.apply(assembly: SPDLocationSpeedCheckerAssembly())
+        assembler.apply(assembly: ViewControllerAssembly())
     }
 }
