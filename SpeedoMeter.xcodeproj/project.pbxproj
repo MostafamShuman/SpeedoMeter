@@ -19,6 +19,13 @@
 		F308E5B72125928200C25051 /* SpeedoMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308E5B62125928200C25051 /* SpeedoMeterUITests.swift */; };
 		F309E07E21259C120027D153 /* SPDLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F309E07D21259C120027D153 /* SPDLocationManager.swift */; };
 		F3AEC8CD2130D2900021D974 /* UIBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8CC2130D2900021D974 /* UIBorderButton.swift */; };
+		F3AEC8D021315A4B0021D974 /* SPDLocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8CF21315A4B0021D974 /* SPDLocationManagerMock.swift */; };
+		F3AEC8D221315FBC0021D974 /* SPDLocationAuthorizationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8D121315FBC0021D974 /* SPDLocationAuthorizationMock.swift */; };
+		F3AEC8D4213160720021D974 /*  SPDLocationAuthorizationDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8D3213160720021D974 /*  SPDLocationAuthorizationDelegateMock.swift */; };
+		F3AEC8D6213161190021D974 /* SPDLocationProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8D5213161190021D974 /* SPDLocationProviderMock.swift */; };
+		F3AEC8D8213161CA0021D974 /* SPDLocationConsumerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8D7213161CA0021D974 /* SPDLocationConsumerMock.swift */; };
+		F3AEC8DA213168B90021D974 /* SPDLocationSpeedCheckerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8D9213168B90021D974 /* SPDLocationSpeedCheckerDelegateMock.swift */; };
+		F3AEC8DC21316ADA0021D974 /* SPDLocationSpeedProviderDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEC8DB21316ADA0021D974 /* SPDLocationSpeedProviderDelegateMock.swift */; };
 		F3CC365421308DE10073736E /* SPDLocationAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC365321308DE10073736E /* SPDLocationAuthorization.swift */; };
 		F3CC36562130938C0073736E /* SPDLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC36552130938C0073736E /* SPDLocationProvider.swift */; };
 		F3CC365821309FF20073736E /* SPDLocationSpeedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */; };
@@ -67,6 +74,13 @@
 		F308E5B82125928200C25051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F309E07D21259C120027D153 /* SPDLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationManager.swift; sourceTree = "<group>"; };
 		F3AEC8CC2130D2900021D974 /* UIBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderButton.swift; sourceTree = "<group>"; };
+		F3AEC8CF21315A4B0021D974 /* SPDLocationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationManagerMock.swift; sourceTree = "<group>"; };
+		F3AEC8D121315FBC0021D974 /* SPDLocationAuthorizationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationAuthorizationMock.swift; sourceTree = "<group>"; };
+		F3AEC8D3213160720021D974 /*  SPDLocationAuthorizationDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " SPDLocationAuthorizationDelegateMock.swift"; sourceTree = "<group>"; };
+		F3AEC8D5213161190021D974 /* SPDLocationProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationProviderMock.swift; sourceTree = "<group>"; };
+		F3AEC8D7213161CA0021D974 /* SPDLocationConsumerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationConsumerMock.swift; sourceTree = "<group>"; };
+		F3AEC8D9213168B90021D974 /* SPDLocationSpeedCheckerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedCheckerDelegateMock.swift; sourceTree = "<group>"; };
+		F3AEC8DB21316ADA0021D974 /* SPDLocationSpeedProviderDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedProviderDelegateMock.swift; sourceTree = "<group>"; };
 		F3CC365321308DE10073736E /* SPDLocationAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationAuthorization.swift; sourceTree = "<group>"; };
 		F3CC36552130938C0073736E /* SPDLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationProvider.swift; sourceTree = "<group>"; };
 		F3CC365721309FF20073736E /* SPDLocationSpeedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedProvider.swift; sourceTree = "<group>"; };
@@ -167,6 +181,7 @@
 		F308E5AA2125928200C25051 /* SpeedoMeterTests */ = {
 			isa = PBXGroup;
 			children = (
+				F3AEC8CE213159E90021D974 /* Mocks */,
 				F308E5AB2125928200C25051 /* SpeedoMeterTests.swift */,
 				F308E5AD2125928200C25051 /* Info.plist */,
 			);
@@ -208,6 +223,20 @@
 				F3AEC8CC2130D2900021D974 /* UIBorderButton.swift */,
 			);
 			path = "@IBDesignable";
+			sourceTree = "<group>";
+		};
+		F3AEC8CE213159E90021D974 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F3AEC8CF21315A4B0021D974 /* SPDLocationManagerMock.swift */,
+				F3AEC8D121315FBC0021D974 /* SPDLocationAuthorizationMock.swift */,
+				F3AEC8D3213160720021D974 /*  SPDLocationAuthorizationDelegateMock.swift */,
+				F3AEC8D5213161190021D974 /* SPDLocationProviderMock.swift */,
+				F3AEC8D7213161CA0021D974 /* SPDLocationConsumerMock.swift */,
+				F3AEC8D9213168B90021D974 /* SPDLocationSpeedCheckerDelegateMock.swift */,
+				F3AEC8DB21316ADA0021D974 /* SPDLocationSpeedProviderDelegateMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		F3CC36632130C57A0073736E /* Assempler */ = {
@@ -449,7 +478,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3AEC8D4213160720021D974 /*  SPDLocationAuthorizationDelegateMock.swift in Sources */,
+				F3AEC8D021315A4B0021D974 /* SPDLocationManagerMock.swift in Sources */,
+				F3AEC8D221315FBC0021D974 /* SPDLocationAuthorizationMock.swift in Sources */,
+				F3AEC8DA213168B90021D974 /* SPDLocationSpeedCheckerDelegateMock.swift in Sources */,
 				F308E5AC2125928200C25051 /* SpeedoMeterTests.swift in Sources */,
+				F3AEC8D8213161CA0021D974 /* SPDLocationConsumerMock.swift in Sources */,
+				F3AEC8DC21316ADA0021D974 /* SPDLocationSpeedProviderDelegateMock.swift in Sources */,
+				F3AEC8D6213161190021D974 /* SPDLocationProviderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
