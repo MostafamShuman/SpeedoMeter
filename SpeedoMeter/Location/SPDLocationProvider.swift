@@ -24,6 +24,7 @@ class SPDDefaultLocationProvider {
         self.locationManager = locationManager
         self.locationAuthorization = locationAuthorization
         locationManager.delegate = self
+        setupNotfication() 
     }
     deinit {
         locationManager.stopUpdatingLocation()
